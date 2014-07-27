@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  username: root
+  pool: 25
+  password:
+  encoding: utf8
+  charset: utf8
+
+development:
+  <<: *default
+  database: creative_do_development
+
+test:
+  <<: *default
+  database: creative_do_test
+
+production:
+  <<: *default
+
+staging:
+  <<: *default
