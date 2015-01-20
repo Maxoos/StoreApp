@@ -1,0 +1,58 @@
+<div class="modal-header">
+    <h3 class="modal-title">Register</h3>
+</div>
+<div class="modal-body">
+
+    <tabset justified="true">
+        <tab heading="Register">
+            <form novalidate name="registationForm" ng-init="setRegistationFormScope(this)" ng-submit="registationForm.$valid && register() || $broadcast('show-errors-check-validity');">
+                <div class="form-group" show-errors>
+                    <input type="email" placeholder="Email Address" class="form-control" name="email" ng-model="user.email" required>
+                    <p class="help-block" ng-if="registationForm.email.$error.required">Email is required</p>
+                    <p class="help-block" ng-if="registationForm.email.$error.email">Please enter a valid email address</p>
+                    <p class="help-block" ng-if="registationForm.email.$error['has already been taken']">This email address has already been taken</p>
+                </div>
+
+                <div class="form-group" show-errors>
+                    <input type="text" placeholder="First Name" class="form-control" name="first_name" ng-model="user.first_name" required>
+                    <p class="help-block" ng-if="registationForm.first_name.$error.required">First name is required</p>
+                </div>
+                <div class="form-group" show-errors>
+                    <input type="text" placeholder="Last Name" class="form-control" name="last_name" ng-model="user.last_name" required>
+                    <p class="help-block" ng-if="registationForm.last_name.$error.required">Last name is required</p>
+                </div>
+
+                <div class="form-group" show-errors>
+                    <input type="text" placeholder="User Name" class="form-control" name="user_name" ng-model="user.user_name" required>
+                    <p class="help-block" ng-if="registationForm.user_name.$error.required">User name is required</p>
+                </div>
+
+                <div class="form-group" show-errors>
+                    <input type="password" placeholder="Password" class="form-control" name="password" ng-model="user.password" required ng-minlength="6">
+                    <p class="help-block" ng-if="registationForm.password.$error.minlength">Password has to have 6 characters or more</p>
+                    <p class="help-block" ng-if="registationForm.password.$error.required">Please enter password</p>
+                </div>
+
+                <input type="submit" name="Submit">
+            </form>
+        </tab>
+        <tab heading="Login">
+            <form novalidate name="loginForm" ng-init="setLoginFormScope(this)" ng-submit="loginForm.$valid && login() || $broadcast('show-errors-check-validity');">
+                <div class="form-group" show-errors>
+                    <input type="email" placeholder="Email Address" class="form-control" name="email" ng-model="user.email" required>
+                    <p class="help-block" ng-if="loginForm.email.$error.required">Email is required</p>
+                    <p class="help-block" ng-if="loginForm.email.$error.email">Please enter a valid email address</p>
+                </div>
+
+                <div class="form-group" show-errors>
+                    <input type="password" placeholder="Password" class="form-control" name="password" ng-model="user.password" required>
+                    <p class="help-block" ng-if="loginForm.password.$error.required">Please enter password</p>
+                </div>
+
+                <input type="submit" name="Submit">
+            </form>
+        </tab>
+    </tabset>
+
+
+</div>

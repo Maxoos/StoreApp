@@ -1,0 +1,4 @@
+{{shop.name}}
+<div ng-repeat="product in products">
+    {{ product.name }} {{product.id}}<a ng-href="{{ path('shopProductShowController', { shop: product.shop.slug, product : product.slug }) }}">link1</a>
+</div>

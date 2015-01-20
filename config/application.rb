@@ -19,5 +19,19 @@ module CreativeDo
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths += Dir[Rails.root.join('app', 'services')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'forms')]
+    config.filter_parameters += [:password]
+    config.generators do |g|
+      g.fixture_replacement :factory_girl
+    end
+
+    # paperclip
+    # Makes sure the file name is dynamic for CDN support
+    config.paperclip_defaults = {
+        :url => 'assets/:id/:style/:basename.:extension',
+        :path => ':attachment/:id_partition/:style/:updated_at.:extension'
+    }
   end
 end
