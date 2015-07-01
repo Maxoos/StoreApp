@@ -1,0 +1,19 @@
+/*
+*= require_self
+*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar {
+    border-radius: 0px;
+}
+
+.form-group .help-block {
+    display: none;
+}
+
+.form-group.has-error .help-block {
+    display: block;
+}

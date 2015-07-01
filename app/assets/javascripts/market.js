@@ -1,0 +1,11 @@
+//= require jquery
+//= require vendor/angular-loader.min.js
+//= require vendor/angular.min.js
+//= require vendor/angular-route.min.js
+//= require vendor/angular-resource.min.js
+//= require angular-rails-templates
+//= require vendor/devise-min.js
+//= require vendor/ui-bootstrap-tpls-0.11.0.min.js
+//= require vendor/showErrors.min.js
+//= require_tree ./market
+//= require_tree ../templates
