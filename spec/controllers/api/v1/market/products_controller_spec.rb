@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Api::V1::Market::ProductsController do
   let(:shop) {FactoryGirl.create(:user).shop}

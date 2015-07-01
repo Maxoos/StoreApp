@@ -17,6 +17,7 @@ gem 'slugged', '~> 2.0'
 gem 'jquery-rails'
   # gem 'therubyracer',  platforms: :ruby
 gem 'bootstrap-sass'
+gem 'angular-rails-templates'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -34,4 +35,5 @@ group :development, :test do
   gem 'json_spec'
   gem 'spork-rails'
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end

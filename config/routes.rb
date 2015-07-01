@@ -7,10 +7,13 @@ Rails.application.routes.draw do
 
   root 'market#index'
 
-  namespace :api do
+  namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
       namespace :market do
         resources :products
+        namespace :user, :module => 'user' do
+            root :to => 'user#show'
+        end
         namespace :shops, :module => 'shop' do
           scope ':shop_slug', :as => :shop do
             root :to => 'shop#show'
@@ -21,6 +24,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources '*category', :only => [:index,:show], :controller => "market"
+  get '*any', :to => 'market#index'
+  # get '/account/products/new2', :to => 'market#index'
 
 end

@@ -1,4 +1,4 @@
-angular.module('market', ['ngRoute','ngResource','ui.bootstrap.showErrors','sessionModule','categoriesModule', 'shopsModule']);
+angular.module('market', ['ngRoute','ngResource','templates','ui.bootstrap.showErrors','sessionModule','categoriesModule', 'shopsModule', 'accountModule']);
 
 angular.module('market').config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);

@@ -28,7 +28,7 @@ module CreativeDo
     end
 
     # paperclip
-    # Makes sure the file name is dynamic for CDN support
+    # Makes sure file name is dynamic for CDN support
     config.paperclip_defaults = {
         :url => 'assets/:id/:style/:basename.:extension',
         :path => ':attachment/:id_partition/:style/:updated_at.:extension'

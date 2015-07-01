@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :user_name
   validates_length_of :user_name, :minimum => 3, :maximum => 40
-  validates_exclusion_of :user_name, :in => %w( c account), :message => "This user name is taken"
+  validates_exclusion_of :user_name, :in => %w( c api account), :message => "This user name is taken"
 
   private
 

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe ProductSearcher do
   let!(:shop) {FactoryGirl.create(:user).shop}

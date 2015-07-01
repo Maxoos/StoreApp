@@ -3,12 +3,9 @@
 //= require vendor/angular.min.js
 //= require vendor/angular-route.min.js
 //= require vendor/angular-resource.min.js
+//= require angular-rails-templates
 //= require vendor/devise-min.js
 //= require vendor/ui-bootstrap-tpls-0.11.0.min.js
 //= require vendor/showErrors.min.js
-//= require market/app
-//= require market/categories/categories
-//= require market/shops/shops
-//= require market/session/session
-//= require market/factories/product
-//= require market/factories/shop
+//= require_tree ./market
+//= require_tree ../templates

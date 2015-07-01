@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe Shop, :type => :model do
   let(:shop) { FactoryGirl.create(:user).shop }
